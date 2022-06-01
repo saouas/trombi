@@ -1,0 +1,23 @@
+{
+  "name": "trombi-back",
+  "version": "1.0.0",
+  "description": "trombinoscope backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "trombinoscope",
+    "backend"
+  ],
+  "author": "Salim Aouas",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
