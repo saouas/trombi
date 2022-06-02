@@ -73,8 +73,6 @@ The complete project can be run locally if you have docker and docker-compose in
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone the repo
 2. create your backend env file from the sample on the following path: `backend/config/.env`
 3. create your backend env file from the sample on the following path: `frontend/.env`
@@ -90,7 +88,7 @@ As i said before this work was done on exactly 3 hours, here is some interesting
 - [ ] Add UT tests
 - [ ] Secure the app with auth system
 - [ ] Make it more user-friendly (UX enhancement)
-- [ ] Add more views (ex: character presentation)
+- [ ] Add character presentation screen
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
