@@ -13,7 +13,7 @@ const UserList = () => {
   const { loading, data, errors } = useTrombi('GET_USERS', {offset});
 
   return (
-    <Grid container direction="row" justifyContent="center" alignContent="center" alignItems="center">
+    <Grid container direction="row" justifyContent="center" alignContent="center" alignItems="center" textAlign="center">
     { loading && <Loader />}
     { !loading && data && data.map((el, index) => {
       if(index === data?.length -1 ) return;
@@ -25,6 +25,10 @@ const UserList = () => {
     <p>correlation_id: {errors?.correlation_id}</p>
     </>
     }
+    {!loading && !data &&
+     <>
+      <b>Oooops we'were not able to communicate with Marvel 🤐 <br/>Please try again later ❤️</b>
+    </>}
     </Grid>
   )
 };
