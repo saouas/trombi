@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+    env_file:
+        ./backend/config/.env
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: "backend-trombi"
+    ports:
+      - "666:666"
+    restart: unless-stopped
+  frontend:
+    env_file:
+        ./frontend/.env
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: "frontend-trombi"
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
