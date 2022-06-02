@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import trombiService from "../services/trombiService";
 import { useNavigationContext } from "../context/NavigationContext";
 import { buildUrl } from "../utils/utils";

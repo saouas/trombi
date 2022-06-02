@@ -1,10 +1,8 @@
 import React from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 
 import Container from './components/Container';
-import UserCard from './components/UserCard/UserCard';
 import Title from './components/Title';
 import Pager from './components/Pager/Pager';
 import UserList from './components/UserList';

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Grid } from '@mui/material';
@@ -7,7 +7,7 @@ import { useNavigationContext } from '../../context/NavigationContext';
 import './Pager.css';
 
 const Pager = (props) => {
-  const { offset, setOffset, setCurrentPage, total, setGetNextPage } = useNavigationContext();
+  const { offset, setOffset, total, setGetNextPage } = useNavigationContext();
   const isAccurateTotal = Math.sign(total) === 1 || Math.sign(total) === 0;
   const [maxPage, setMaxPage] = useState(0);
   const show = !!isAccurateTotal;
