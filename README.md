@@ -11,7 +11,7 @@
   <p align="center">
     A simple trombinoscope to consult the Marvel Team.
     <br>
-    Accessible at https://www.trombi.salimaouas.dev
+    Accessible at https://trombi.salimaouas.dev
 </div>
 
 
