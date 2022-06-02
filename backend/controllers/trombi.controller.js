@@ -1,3 +1,4 @@
+const { randomUUID } = require('crypto');
 const marvelService = require('../services/marvel');
 const { getCharacterNameAndImage } = require('../utils/utils');
 
@@ -17,16 +18,21 @@ const getUsers = async  (req, res, next) => {
       const { data : { data: { results, count, total } } } = users;
       const cleanData = getCharacterNameAndImage(results);
       const finalOffset = offset ? parseInt(offset) + parseInt(count) : parseInt(count);
-      res.json({...cleanData, offset: finalOffset, total}).status(200);
+      res.status(200).json([...cleanData, {offset: finalOffset, total}]);
     }
     else{
-      return res.json({
+      return res.status(users?.status).json({
         status: "error",
-        message: "something went wrong with Marvel 😿"
-      }).status(users?.status);
+        message: "Oops please try again"
+      });
     }
   } catch(err){
     console.log(err);
+    return res.status(400).json({
+      status: "error",
+      message: "something went wrong with Trombi, please contact admin",
+      correlation_id: randomUUID()
+    })
     next(err);
   }
 };
