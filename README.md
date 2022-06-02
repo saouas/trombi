@@ -60,6 +60,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [ExpressJS](https://expressjs.com/)
 * [MaterialUI](https://mui.com/)
 * [Docker](https://www.docker.com/)
+* [Marvel API](https://developer.marvel.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
