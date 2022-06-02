@@ -20,11 +20,14 @@ const Pager = (props) => {
   // Used to re-calculate the correct left pages
   useEffect(() => {
     const max = getMaxNumberPage(total, offset);
+    if(isNaN(max)){
+      setMaxPage(0);
+      return;
+    }
     setMaxPage(max)
   },[total])
 
   const handleChangePage = (event, value) => {
-    setCurrentPage(value);
     setOffset(value * 20 - 20)
     setGetNextPage(value);
 
