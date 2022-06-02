@@ -10,6 +10,8 @@
 
   <p align="center">
     A simple trombinoscope to consult the Marvel Team.
+    <br>
+    Accessible at https://www.trombi.salimaouas.dev
 </div>
 
 
@@ -54,7 +56,7 @@ Personal requirements:
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This section list any major frameworks/libraries used to bootstrap your project.
 
 * [React.js](https://reactjs.org/)
 * [ExpressJS](https://expressjs.com/)
