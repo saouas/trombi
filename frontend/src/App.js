@@ -13,7 +13,7 @@ import { NavigationContextProvider } from './context/NavigationContext';
 function App() {
   return (
     <div className="App">
-      <NavigationContextProvider value={{ offset: 0, page: 1}}>
+      <NavigationContextProvider>
         <Container>
           <Title title="My Trombi'"/>
           <UserList/>

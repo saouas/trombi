@@ -7,30 +7,33 @@ import { useNavigationContext } from '../../context/NavigationContext';
 import './Pager.css';
 
 const Pager = (props) => {
-  const { offset, setOffset, currentPage, setCurrentPage, total, setTotal } = useNavigationContext();
+  const { offset, setOffset, setCurrentPage, total, setGetNextPage } = useNavigationContext();
   const isAccurateTotal = Math.sign(total) === 1 || Math.sign(total) === 0;
-  const [count, setCount] = useState(isAccurateTotal ? total : 0);
+  const [maxPage, setMaxPage] = useState(0);
   const show = !!isAccurateTotal;
 
-  const getOffsetFromPageNumber = () => {
+  const getMaxNumberPage = (total, offset) => {
     if(!isAccurateTotal) return 0;
-    //console.log(parseInt(total) / 20);
+    return Math.trunc(parseInt(total/offset));
   };
 
+  // Used to re-calculate the correct left pages
   useEffect(() => {
-    console.log(`total:${total} | offset: ${offset}`);
-    setTotal(parseInt(total/offset));
-  },[currentPage, offset])
+    const max = getMaxNumberPage(total, offset);
+    setMaxPage(max)
+  },[total])
 
   const handleChangePage = (event, value) => {
     setCurrentPage(value);
-    getOffsetFromPageNumber();
+    setOffset(value * 20 - 20)
+    setGetNextPage(value);
+
   }
 
   return (
    show ? <Grid item container xs={12} alignContent="center" justifyContent="center">
       <Stack spacing={2}>
-        <Pagination count={total} variant="outlined" className="pager" onChange={handleChangePage}/>
+        <Pagination count={maxPage} variant="outlined" className="pager" onChange={handleChangePage}/>
       </Stack>
     </Grid> : null
   );

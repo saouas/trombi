@@ -7,7 +7,7 @@ const getUsers = async (URL) => {
 const endpoint = {
   'BASE_URL': process.env.REACT_APP_API_ENDPOINT,
   'GET_USERS': getUsers,
-  'GET_USERS_PATH': '/trombi/users'
+  'GET_USERS_ROUTE': 'trombi/users'
 };
 
 export default {
