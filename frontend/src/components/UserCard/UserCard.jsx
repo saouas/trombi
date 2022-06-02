@@ -20,7 +20,7 @@ const UserCard = ({ name = 'Salim', photo = 'http://i.annihil.us/u/prod/marvel/i
               alt={`$photo de ${name}`}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div" textAlign="center">
+              <Typography gutterBottom variant="h6" component="div" textAlign="center">
                 {name}
               </Typography>
             </CardContent>

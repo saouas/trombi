@@ -5,8 +5,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const Loader = () => {
   return (
-    <Grid item xs={12}>
-      <CircularProgress disableShrink />
+    <Grid container justifyContent="center">
+      <CircularProgress disableShrink/>
     </Grid>);
 
 };
